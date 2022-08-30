@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+
+    <!-- form tag è il parent element -->
+    <!-- method indica il metodo con cui verranno passati i dati -->
+    <!-- action indica l'azion che effettuerà il form al momento dell'invio -->
+    <!-- autocomplete indica se il riempimento automatico è permesso o meno -->
+    <form method="GET|POST" action="register.php" autocomplete="on">
+        <fieldset>
+            <legend>Anagrafica</legend>
+
+            <label for="username">User name</label>
+            <input type="text" name="username" id="username" placeholder="Inserisci qui il tuo username" required>
+            <br>
+            <label for="passwd">Passoword</label>
+            <input type="password" name="passwd" id="passwd" placeholder="Inserisci una passoword di 8 caratteri"
+                required>
+        </fieldset>
+        <fieldset>
+            <legend>Email</legend>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" disabled>
+
+        </fieldset>
+        <fieldset>
+            <legend>Data</legend>
+
+            <label for="date">Data</label>
+            <input type="date" name="date" id="date">
+            <br>
+            <label for="time">Ora</label>
+            <input type="time" name="time" id="time">
+            <br>
+            <label for="date-and-time">Data e Ora</label>
+            <input type="datetime-local" name="date-and-time" id="date-and-time">
+        </fieldset>
+        <fieldset>
+            <legend>File</legend>
+
+            <label for="file-upload">Upload file</label>
+            <input type="file" name="file-upload" id="file-upload">
+        </fieldset>
+        <fieldset>
+            <legend>Checkboxes e Radio buttons</legend>
+
+            <label>Radios</label>
+            <input type="radio" name="domanda1" value="0" checked>A.
+            <input type="radio" name="domanda1" value="1">B.
+            <input type="radio" name="domanda1" value="2">C.
+            <hr>
+            <label for="giovanni1">Checkboxes</label>
+            <input type="checkbox" name="giovanni1" id="giovanni1" checked>
+            <label for="giovanni2">Checkboxes</label>
+            <input type="checkbox" name="giovanni2" id="giovanni2">
+            <hr>
+            <label for="comments">Commenti</label>
+            <textarea name="comments" id="comments" cols="100%" rows="2" maxlength="300"
+                placeholder="Inserisci qui il tuo commento"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Regione</legend>
+
+            <select name="region" id="region">
+                <option value=""></option>
+                <optgroup label="Friuli Venezia Giulia">
+                    <option value="UD">Udine</option>
+                    <option value="PD">Pordenone</option>
+                    <option value="TS">Trieste</option>
+                </optgroup>
+                <optgroup label="Veneto">
+                    <option value="VE">Venezia</option>
+                    <option value="VI">Vicenza</option>
+                    <option value="PD">Padova</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <!-- questi due bottoni invieranno i dati del form -->
+        <input type="submit" value="Salva">
+        <button type="submit">Invia</button>
+        <!-- --------------------------------------------- -->
+        <button type="reset">Reset</button> <!-- pulisce i campi del form -->
+        <button type="button">Button</button> <!-- bottone agnostico, non scatena azioni del form -->
+
+    </form>
+
+</body>
+
+</html>
