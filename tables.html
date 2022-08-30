@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table {
+            width: 100%
+        }
+
+        td {
+            text-align: center;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- tag semantici: thead, tbody, tfoot -->
+    <table>
+        <caption>Registry</caption>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Presenza</th>
+                <th>Webcam</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Marco</td>
+                <td>Rossi</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="2">Marco</td>
+                <!-- colspan allunga la colonna per un certo numero di altre colonne -->
+                <!-- rowspan allunga la colonna verticalmente -->
+                <td>✅</td>
+            </tr>
+            <tr>
+
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Marco</td>
+                <td>Rossi</td>
+                <td>✅</td>
+                <td>✅</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">totale</td>
+                <td>30</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
